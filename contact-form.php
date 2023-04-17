@@ -109,7 +109,7 @@ function HTML_FORM()
   <textarea type="text" class="form-control" name="Message" placeholder="Message"></textarea>
 </div>
 <div class="col-12 gap-2 d-grid">
-  <button type="submit" name="ContactForm8" class="btn btn-primary">Contact</button>
+  <button type="submit" name="ContactForm" class="btn btn-primary">Contact</button>
 </div>
 </form> ';
 
@@ -119,7 +119,7 @@ function HTML_FORM()
 // STORE MAIL FUNCTION will sanitize the inputs and STORE DATA INTO wp_contact_form TABLE
 function STORE_MAIL()
 {
-    if (isset($_POST['ContactForm8'])) {
+    if (isset($_POST['ContactForm'])) {
         // if the submit button is clicked, send the email
         if (
             isset($_POST['FirstName']) && !empty($_POST['FirstName'])
